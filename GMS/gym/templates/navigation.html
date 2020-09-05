@@ -19,9 +19,35 @@
             class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="abc">
         <ul class="navbar-nav">
+            {% if not request.user.is_staff %}
             <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+            {% else %}
+            <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Enquiry</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Add Enquiry</a>
+                    <a href="#" class="dropdown-item">View Enquiry</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Plan</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Add Plan</a>
+                    <a href="#" class="dropdown-item">View Plan</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Equipment</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Add Equipment</a>
+                    <a href="#" class="dropdown-item">View Equipment</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+           {% endif %}
         </ul>
     </div>
 </nav>
