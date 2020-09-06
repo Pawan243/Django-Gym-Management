@@ -7,24 +7,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
 </head>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-fixed-top">
     <a href="" class="navbar-brand">Gym Management</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#abc"><span
             class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="abc">
         <ul class="navbar-nav">
-            {% if not request.user.is_staff %}
             <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-            {% else %}
-            <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            {% if request.user.is_staff %}
             <li class="nav-item dropdown">
                 <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Enquiry</a>
                 <div class="dropdown-menu">
@@ -47,19 +49,44 @@
                 </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
-           {% endif %}
+            {% endif %}
         </ul>
     </div>
 </nav>
+<!-- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <h1>SQUAD FREE</h1>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Example menu</a></li>
+                        <li><a href="#">Example menu</a></li>
+                        <li><a href="#">Example menu</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+   
+</nav>  -->
+
 {% block body %}
 
 {% endblock %}
-
-
-
-
-
-
-
 
 </html>
