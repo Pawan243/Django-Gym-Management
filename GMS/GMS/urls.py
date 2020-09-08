@@ -26,5 +26,9 @@ urlpatterns = [
     path('logout',Logout, name='logout'),
     path('add_enquiry/',Add_Enquiry,name='add_enquiry'),
     path('view_enquiry/',View_Enquiry,name='view_enquiry'),
+    path('delete_enquiry(?p<int:pid>)', Delete_Enquiry, name='delete_enquiry'),
+    path('add_equipment/',Add_Equipment,name='add_equipment'),
+    path('view_equipment/',View_Equipment,name='view_equipment'),
+    path('delete_equipment(?p<int:pid>)', Delete_Equipment, name='delete_equipment'),
 ]
  
