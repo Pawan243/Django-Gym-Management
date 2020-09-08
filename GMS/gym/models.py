@@ -17,7 +17,7 @@ class Equipment(models.Model):
     price = models.CharField(max_length=10)
     unit = models.CharField(max_length=10)
     date = models.CharField(max_length=40)
-    desciption = models.CharField(max_length=500)
+    description = models.CharField(max_length=500)
 
     def __str__(self):
         return self.name
