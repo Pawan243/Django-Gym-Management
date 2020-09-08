@@ -72,3 +72,37 @@ def View_Enquiry(request):
     enq = Enquiry.objects.all()
     d = {'enq': enq}
     return render(request, 'view_enquiry.html', d)
+def Delete_Enquiry(request,pid):
+    enquiry = Enquiry.objects.get(id=pid)
+    enquiry.delete()
+    return redirect('view_enquiry')
+
+
+def Add_Equipment(request):
+    error = ""
+    if not request.user.is_staff:
+        return redirect('login')
+    if request.method == 'POST':
+        n = request.POST['name']
+        p = request.POST['price']
+        u = request.POST['unit']
+        d = request.POST['date']
+        desc = request.POST['desc']
+        try:
+            Equipment.objects.create( name=n, price=p, unit=u, date=d, description=desc)
+            error = "no"
+        except:
+            error = "yes"
+    d = {'error': error}
+    return render(request, 'add_equipment.html', d)
+
+
+def View_Equipment(request):
+    equ = Equipment.objects.all()
+    d = {'equ': equ}
+    return render(request, 'view_equipment.html', d)
+
+def Delete_Equipment(request,pid):
+    equipment = Equipment.objects.get(id=pid)
+    equipment.delete()
+    return redirect('view_equipment')
