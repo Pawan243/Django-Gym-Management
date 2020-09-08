@@ -1,0 +1,34 @@
+{% extends 'navigation.html' %}
+{% block body %}
+<div class="container" style="margin-top: 60px;">
+    <h3 class="text-center text-primary font-weight-bold">Add Equipment</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for=""><b>Name</b></label>
+        <input type="text" name="name" class="form-control">
+        <label for=""><b>Price (In INR.)</b></label>
+        <input type="text" name="price" class="form-control">
+        <label for=""><b>Unit</b></label>
+        <input type="text" name="unit" class="form-control">
+        <label for=""><b>Date</b></label>
+        <input type="text" name="date" class="form-control">
+        <label for=""><b>Description</b></label>
+        <input type="textarea" name="desc" class="form-control">
+        <br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+
+{% ifequal error "no" %}
+<script>
+    alert('Record Inserted Successfully');
+    window.location=("{% url 'view_equipment' %}")
+</script>
+{% endifequal %}
+{% ifequal error "yes" %}
+<script>
+    alert('Something went wrong, Try Again');
+</script>
+{% endifequal %}
+
+{% endblock%}
