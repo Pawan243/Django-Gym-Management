@@ -21,7 +21,6 @@ class Equipment(models.Model):
 
     def __str__(self):
         return self.name
-
 class Plan(models.Model):
     name = models.CharField(max_length=50)
     amount = models.CharField(max_length=10)
