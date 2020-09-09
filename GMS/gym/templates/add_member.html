@@ -1,0 +1,41 @@
+{% extends 'navigation.html' %}
+{% block body %}
+<div class="container" style="margin-top: 60px;">
+    <h3 class="text-center text-primary font-weight-bold">Add Enquiry</h3>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for=""><b>Name</b></label>
+        <input type="text" name="name" class="form-control">
+        <label for=""><b>Contact</b></label>
+        <input type="tel" name="contact" class="form-control">
+        <label for=""><b>Email Id</b></label>
+        <input type="email" name="emailid" class="form-control">
+        <label for=""><b>Age</b></label>
+        <input type="text" name="age" class="form-control">
+        <label for=""><b>Plan</b></label>
+        <input type="text" name="plan" class="form-control">
+        <label for=""><b>Join Date</b></label>
+        <input type="text" name="joindate" class="form-control">
+        <label for=""><b>Expirey Date</b></label>
+        <input type="text" name="expdate " class="form-control">
+        <label for=""><b>Initial Amount</b></label>
+        <input type="text" name="initialamount" class="form-control">
+        
+        <br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+
+{% ifequal error "no" %}
+<script>
+    alert('Record Inserted Successfully');
+    window.location=("{% url 'view_enquiry' %}")
+</script>
+{% endifequal %}
+{% ifequal error "yes" %}
+<script>
+    alert('Something went wrong, Try Again');
+</script>
+{% endifequal %}
+
+{% endblock%}
