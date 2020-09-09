@@ -106,3 +106,30 @@ def Delete_Equipment(request,pid):
     equipment = Equipment.objects.get(id=pid)
     equipment.delete()
     return redirect('view_equipment')
+
+def Add_Plan(request):
+    error = ""
+    if not request.user.is_staff:
+        return redirect('login')
+    if request.method == 'POST':
+        n = request.POST['name']
+        a = request.POST['amount']
+        d = request.POST['duration']
+        try:
+            Plan.objects.create( name=n, amount=a, duration=d)
+            error = "no"
+        except:
+            error = "yes"
+    d = {'error': error}
+    return render(request, 'add_plan.html', d)
+
+
+def View_Plan(request):
+    pln = Plan.objects.all()
+    d = {'pln': pln}
+    return render(request, 'view_plan.html', d)
+
+def Delete_Plan(request,pid):
+    plan = Plan.objects.get(id=pid)
+    plan.delete()
+    return redirect('view_plan')
