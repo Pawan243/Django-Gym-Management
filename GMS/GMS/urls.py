@@ -36,5 +36,9 @@ urlpatterns = [
     path('add_plan/',Add_Plan,name='add_plan'),
     path('view_plan/',View_Plan,name='view_plan'),
     path('delete_plan(?p<int:pid>)', Delete_Plan, name='delete_plan'),
+
+    path('add_member/',Add_Member,name='add_meMember'),
+    path('view_member/',View_Member,name='view_meMember'),
+    path('delete_member(?p<int:pid>)', Delete_Member, name='delete_meMember'),
 ]
  
