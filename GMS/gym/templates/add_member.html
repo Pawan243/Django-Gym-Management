@@ -12,15 +12,24 @@
         <input type="email" name="emailid" class="form-control">
         <label for=""><b>Age</b></label>
         <input type="text" name="age" class="form-control">
-        <label for=""><b>Plan</b></label>
-        <input type="text" name="plan" class="form-control">
+        <br>
+        <label for=""><b>Gender</b></label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <br>
+        <label for=""><b>Plan Name</b></label>
+        <select name="plan" class="form-control" id="">
+            {% for i in plan %}
+            <option value="{{i.name}}">{{i.name}}</option>
+            {% endfor %}
+
+        </select>
         <label for=""><b>Join Date</b></label>
         <input type="text" name="joindate" class="form-control">
         <label for=""><b>Expirey Date</b></label>
         <input type="text" name="expdate " class="form-control">
         <label for=""><b>Initial Amount</b></label>
         <input type="text" name="initialamount" class="form-control">
-        
         <br>
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>
