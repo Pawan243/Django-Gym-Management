@@ -133,3 +133,38 @@ def Delete_Plan(request,pid):
     plan = Plan.objects.get(id=pid)
     plan.delete()
     return redirect('view_plan')
+
+def Add_Member(request):
+    error = ""
+    plan1 = Plan.objects.all()
+    if not request.user.is_staff:
+        return redirect('login')
+    if request.method == 'POST':
+        n = request.POST['name']
+        c = request.POST['contact']
+        e = request.POST['emailid']
+        a = request.POST['age']
+        g = request.POST['gender']
+        p = request.POST['plan']
+        joindate = request.POST['joindate']
+        expiredate = request.POST['expdate']
+        initialamount = request.POST['initialamount']
+        plan = Plan.objects.filter(name=p).first()
+        try:
+            Member.objects.create( name=n, contact=c,emailid=e, age=a,gender=g,plan=plan, joindate=joindate, expiredate = expiredate, initialamount = initialamount)
+            error = "no"
+        except:
+            error = "yes"
+    d = {'error': error, 'plan':plan1}
+    return render(request, 'add_member.html', d)
+
+
+def View_Member(request):
+    member = Member.objects.all()
+    d = {'member': member}
+    return render(request, 'view_member.html', d)
+
+def Delete_Member(request,pid):
+    member = Member.objects.get(id=pid)
+    member.delete()
+    return redirect('view_member')
