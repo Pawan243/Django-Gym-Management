@@ -34,6 +34,7 @@ class Member(models.Model):
     contact = models.CharField(max_length=10)
     emailid = models.CharField(max_length=50)
     age = models.CharField(max_length=40)
+    gender = models.CharField(max_length=10, default="")
     plan = models.CharField(max_length=50)
     joindate = models.CharField(max_length=40)
     expiredate = models.CharField(max_length=40)
