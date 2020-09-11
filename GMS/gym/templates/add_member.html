@@ -25,9 +25,9 @@
 
         </select>
         <label for=""><b>Join Date</b></label>
-        <input type="text" name="joindate" class="form-control">
+        <input type="date" name="joindate" class="form-control">
         <label for=""><b>Expirey Date</b></label>
-        <input type="text" name="expdate " class="form-control">
+        <input type="date" name="expdate" class="form-control">
         <label for=""><b>Initial Amount</b></label>
         <input type="text" name="initialamount" class="form-control">
         <br>
@@ -38,7 +38,7 @@
 {% ifequal error "no" %}
 <script>
     alert('Record Inserted Successfully');
-    window.location=("{% url 'view_enquiry' %}")
+    window.location=("{% url 'view_member' %}")
 </script>
 {% endifequal %}
 {% ifequal error "yes" %}
