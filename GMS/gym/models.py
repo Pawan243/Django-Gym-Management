@@ -36,8 +36,8 @@ class Member(models.Model):
     age = models.CharField(max_length=40)
     gender = models.CharField(max_length=10, default="")
     plan = models.CharField(max_length=50)
-    joindate = models.CharField(max_length=40)
-    expiredate = models.CharField(max_length=40)
+    joindate = models.DateField(max_length=40)
+    expiredate = models.DateField(max_length=40)
     initialamount = models.CharField(max_length=10)
 
 
