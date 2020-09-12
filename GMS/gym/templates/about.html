@@ -1,4 +1,19 @@
 {% extends 'navigation.html' %}
+{% load static %}
 {% block body %}
-<h3>About Us , Thank you</h3>
+<div class="container">
+    <h2 class="text-center text-primary font-weight-bold mt-5">About Us</h2>
+    <div class="row mt-5">
+        <div class="col-sm-4 text-center">
+            <img src="{% static 'images/about-us.jpg' %}" width="300" height="200" class="img-responsive" alt="">
+        </div>
+        <div class="col-sm-8 text-center  mt-5">
+            <b> Friends<br>
+            This is simple gym management project developed by Pawan Kumar using python django, html, css , javascript,and bootstrap.</b>
+        </div>
+    </div>
+</div>
+<footer class="text-center mt-5">
+    <h3>Copyright &copy: 2020, All Rights Reserved</h3>
+</footer>
 {% endblock%}
