@@ -1,4 +1,40 @@
 {% extends 'navigation.html' %}
+{% load static %}
+{% block title %}
+HOME-Hospital management
+{% endblock %}
+
 {% block body %}
-<h3>Contact Us , Thank you</h3>
-{% endblock%}
+<style>
+.mydivstyle:hover {
+box-shadow: 0 0 20px 0 rgba(28, 8, 204, 0.3);
+transform: translateY(-20px);
+}
+</style>
+<div class="container" style="margin-top: 50px;">
+    <h2 class="text-center">Contact Us</h2>
+    <div class="row mt-5 text-center">
+        <div class="col-lg-3 col-sm-6 mydivstyle">
+            <h4><i class="fa fa-phone-square"></i>Contact</h4>
+            <p class="mt-3 font-weight-bold"><a class="text-danger" href="tel: +91 91230-92581">+91 91230-92581</a></p>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 mydivstyle">
+            <h4><i class="fa fa-envelope"></i> Send Email</h4>
+            <p class="mt-3 font-weight-bold"><a class="text-danger"
+                    href="mailto:pawanswami243@gmail.com">pawanswami243@gmail.com</a></p>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 mydivstyle">
+            <h4><i class="fa fa-address-card"></i> Office Address</h4>
+            <p class="mt-3 font-weight-bold"><a class="text-danger"
+                    href="http://maps.google.com/maps?q=moter+pallu">Moter, Rajasthan</a></p>
+        </div>
+
+        <div class="col-lg-3 col-sm-6 mydivstyle">
+            <h4><i class="fa fa-clock-o"></i> Opening Hours</h4>
+            <p class="mt-3 font-weight-bold"><a class="text-danger">9:00 AM to 9:00 PM</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
