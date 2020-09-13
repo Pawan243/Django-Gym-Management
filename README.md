@@ -1,21 +1,16 @@
-# Django-Gym-Management
-A gym management system built with django-python web framwork.
-
-# Django-Gym-Member-Manager
+# Django-Gym-Member-Management
 A Gym Member Manager Web App using Django
 
-A simple gym member manager to keep a track of all payments and members
+A simple gym management system to keep a track of all Equipment, Plans, Enquires and members
 
 ## Features
 
 - Easy to use (Even an amateur can use!)
 - A simple GUI
 - Faster load speeds (thanks to Django 2.0!)
-- Reports for keeping track of payments and admissions
 
 ## Working
 
-![Working](results/Gym-Member-Manager.gif)
 
 ## How to use
 
