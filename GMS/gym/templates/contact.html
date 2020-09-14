@@ -1,11 +1,11 @@
 {% extends 'navigation.html' %}
 {% load static %}
 {% block title %}
-HOME-Hospital management
+Fit India
 {% endblock %}
 
 {% block body %}
-<style>
+<!-- <style>
 .mydivstyle:hover {
 box-shadow: 0 0 20px 0 rgba(28, 8, 204, 0.3);
 transform: translateY(-20px);
@@ -36,5 +36,73 @@ transform: translateY(-20px);
             <p class="mt-3 font-weight-bold"><a class="text-danger">9:00 AM to 9:00 PM</a></p>
         </div>
     </div>
+</div> -->
+
+<div class="container"  style="margin-top: 50px;">
+    <div class="section-header">
+        <h2 class="section-title wow fadeInDown mt-5">Contact Us</h2>
+        <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus
+            vitae massa <br> semper aliquam quis mattis quam.</p>
+    </div>
+    <div class="container contact-info mt-5">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="contact-form">
+                    <h3>Contact Info</h3>
+
+                    <address>
+                        <strong>Amazing Gym,</strong><br>
+                        12345 Moter, Street 125<br>
+                        Rajasthan, India 335524<br>
+                        <abbr title="Phone">P:</abbr> +91 91230-92581
+                    </address>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-8">
+                <div class="contact-form">
+
+                    <form id="main-contact-form" name="contact-form" method="post" action="#">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" rows="8" placeholder="Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+{% endblock %}
+{% block footer %}
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-white">Copyright @2020 All rights reserved | Made With <i class="fa fa-heart"></i>
+                    by Pawan Kumar</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a  href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 {% endblock %}
