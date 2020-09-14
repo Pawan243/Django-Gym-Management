@@ -10,7 +10,7 @@ A simple gym management system to keep a track of all Equipment, Plans, Enquires
 - Faster load speeds (thanks to Django 2.0!)
 
 ## Working
-
+![20200914-211942 (2)](https://user-images.githubusercontent.com/54316119/93116901-92d62580-f6db-11ea-9116-07506bb0a417.gif)
 
 ## How to use
 
