@@ -198,9 +198,7 @@ color: #020202;
 #main-nav.navbar-default {
 background: #FFF;
 }
-.navbar-nav>li {
-}
- 
+
 
 @media only screen and (min-width: 768px) {
   #main-nav.navbar-default { 
@@ -401,8 +399,7 @@ color: #FFE3D2;
 font-size: 30px;
 padding-top: 10px;
 }
-.media.service-box:hover .pull-left > i {  
-}
+
 #portfolio {
   padding: 100px 0;
   background: #FFFFFF;
@@ -587,7 +584,6 @@ margin: 0 8px;
   background: #07080A;
   background: url('../images/img2.jpg');    
   background-size: cover;  };
-}
 #about .column-title{
 color:#fff;
 }
@@ -840,9 +836,7 @@ color: #FFFFFF;
 #contact-us {
   padding: 100px 0 10px;
 }
-#contact-us h1,
-#contact-us h2 {
-}
+
 /*Contact*/
  .contact-info{
  background: #F9690E;
