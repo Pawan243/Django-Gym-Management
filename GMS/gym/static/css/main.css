@@ -31,7 +31,7 @@
 }
 
 body, html {
-	height: 100%;
+	height: auto;
 	font-family: Montserrat-Regular, sans-serif;
 }
 
@@ -52,7 +52,7 @@ a:focus {
 	outline: none !important;
 }
 
-a:hover {
+a:hover{
 	text-decoration: none;
   color: #fff;
 }

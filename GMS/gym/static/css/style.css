@@ -1,7 +1,8 @@
 .nav-link{
-    color: white!important;
+    color: rgb(42, 224, 97)!important;
 }
 .nav-link:hover{
     background-color: lightblue!important;
+    color: black!important;
     border-radius: 10px;
-}
+} 
