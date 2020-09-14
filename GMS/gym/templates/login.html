@@ -25,19 +25,19 @@
     </form>
 </div> -->
 <div class="limiter">
-    <div class="container-login100" style="background-image: url('images/img-01.jpg');">
-        <div class="wrap-login100 p-t-30 ">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-80 ">
             <form class="login100-form validate-form pt-0" action="" method="post">
                 {% csrf_token %}
                 <div class="login100-form-avatar">
                     <img src="{% static 'images/gym-avatar.jpg' %}" alt="AVATAR">
                 </div>
 
-                <span class="login100-form-title p-t-20 p-b-45">
+                <span class="login100-form-title p-t-20 p-b-45 mt-5 mb-4">
                     Admin Login
                 </span>
 
-                <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+                <div class="wrap-input100 validate-input m-b-10 mb-3" data-validate = "Username is required">
                     <input class="input100" type="text" name="uname" placeholder="Username">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
@@ -45,7 +45,7 @@
                     </span>
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+                <div class="wrap-input100 validate-input m-b-10 mb-3" data-validate = "Password is required">
                     <input class="input100" type="password" name="pwd" placeholder="Password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
