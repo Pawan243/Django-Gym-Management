@@ -1,19 +1,51 @@
-{% extends 'navigation.html' %}
+{% extends 'navigation.html'%}
 {% load static %}
+
 {% block body %}
+
 <div class="container">
     <h2 class="text-center text-primary font-weight-bold mt-5">About Us</h2>
     <div class="row mt-5">
         <div class="col-sm-4 text-center">
             <img src="{% static 'images/about-us.jpg' %}" width="300" height="200" class="img-responsive" alt="">
         </div>
-        <div class="col-sm-8 text-center  mt-5">
+        <div class="col-sm-8 text-center mt-5">
             <b> Friends<br>
-            This is simple gym management project developed by Pawan Kumar using python django, html, css , javascript,and bootstrap.</b>
+                This is simple gym management project developed by Pawan Kumar using python django, html, css ,
+                javascript,and bootstrap.</b>
         </div>
     </div>
 </div>
-<footer class="text-center mt-5">
-    <h3>Copyright &copy: 2020, All Rights Reserved</h3>
+{% endblock%}
+{% block css %}
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+color: white;
+text-align: center;
+}
+{% endblock %}
+{% block footer %}
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-white">Copyright @2020 All rights reserved | Made With <i class="fa fa-heart"></i>
+                    by Pawan Kumar</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>
 {% endblock%}
