@@ -3,6 +3,7 @@ A Gym Member Manager Web App using Django
 
 A simple gym management system to keep a track of all Equipment, Plans, Enquires and members
 
+![developer](https://img.shields.io/badge/Developed%20By%20%3A-Pawan%20Kumar-blue)
 ## Features
 
 - Easy to use (Even an amateur can use!)
